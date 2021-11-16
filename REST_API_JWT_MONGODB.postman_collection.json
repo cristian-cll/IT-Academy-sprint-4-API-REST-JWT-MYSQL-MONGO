@@ -1,0 +1,416 @@
+{
+	"info": {
+		"_postman_id": "d4d83c9f-ae0e-4dcd-a9b1-460c4564ac9f",
+		"name": "REST_API_JWT_MONGODB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create_player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Cristian5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_players",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_player_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/players/61371d1229f7669a6c5ef839",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"61371d1229f7669a6c5ef839"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_player_by_id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"Cristian6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/61371d1229f7669a6c5ef839",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"61371d1229f7669a6c5ef839"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new_game_player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6W10sImlhdCI6MTYyOTU2MjI1MX0.jjBefF84vs3TVBI61yn4TzwR75nXVTFUjeRm4_wLrA8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/players/61371d1229f7669a6c5ef839/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"61371d1229f7669a6c5ef839",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_games_player",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cache-Control",
+						"value": "no-cache",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/players/61371d1229f7669a6c5ef839/games",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"61371d1229f7669a6c5ef839",
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_ranking",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/ranking",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"ranking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_ranking_winner",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/ranking/winner",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"winner"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_ranking_looser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTM3MWQxMjI5Zjc2NjlhNmM1ZWY4MzkiLCJ1c2VybmFtZSI6IkNyaXN0aWFuNSIsImlhdCI6MTYzMTAwMTg3NCwiZXhwIjoxNjMxMDg4Mjc0fQ.i_xgzhVYykVthcMm1Q9ChHNNFNg_4wKSsAwdnD1k5L4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/ranking/looser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"ranking",
+						"looser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": \"61371d1229f7669a6c5ef839\",\r\n    \"username\" : \"Cristian6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/players/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"players",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

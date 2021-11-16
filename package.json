@@ -1,0 +1,26 @@
+{
+  "name": "api_rest_node_server_mongodb_mysql_jwt",
+  "version": "1.0.0",
+  "description": "Roll Dice Game. API REST Node + JWT + MYSQL + MONGO",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon api/app.js",
+    "mysql": "set DB_ENV=MYSQL& nodemon api/app.js",
+    "mongo": "set DB_ENV=MONGO& nodemon api/app.js"
+  },
+  "keywords": [],
+  "author": "https://github.com/cristian-cll/",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.4",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.0",
+    "nodemon": "^2.0.12",
+    "sequelize": "^6.6.5",
+    "winston": "^3.3.3"
+  }
+}
